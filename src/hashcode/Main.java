@@ -10,17 +10,15 @@ public class Main {
         HashEncrypt hashEncrypt = new HashEncrypt();
         Bruteforce bruteforce = new Bruteforce();
 
-        String encrOrDecr;
+        String encryptOrDecrypt;
         System.out.println("Encrypt or decrypt? (e/d)");
         user.promptInput();
-        encrOrDecr = user.getInput().toLowerCase();
+        encryptOrDecrypt = user.getInput().toLowerCase();
 
         String unencryptedString;
 
-        switch (encrOrDecr) {
-            case "encrypt":
-            case "en":
-            case "e":
+        switch (encryptOrDecrypt) {
+            case "encrypt", "en", "e":
                 System.out.println("\nType string to be encrypted:");
                 user.promptInput();
                 unencryptedString = user.getInput();
@@ -38,9 +36,7 @@ public class Main {
                 }
                 System.out.println("\n" + unencryptedString + " -> " + hashEncrypt.encryptString(unencryptedString));
                 break;
-            case "decrypt":
-            case "de":
-            case "d":
+            case "decrypt", "de", "d":
                 System.out.println("\nPaste hash to be decrypted:");
                 user.promptInput();
                 undecryptedString = user.getInput();
