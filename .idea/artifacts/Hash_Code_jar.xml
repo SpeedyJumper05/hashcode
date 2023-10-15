@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Hash Code:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Hash_Code_jar</output-path>
+    <root id="archive" name="Hash Code.jar">
+      <element id="module-output" name="Hash Code" />
+    </root>
+  </artifact>
+</component>
