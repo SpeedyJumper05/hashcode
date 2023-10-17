@@ -7,7 +7,6 @@ public class Bruteforce {
     public String charactersA = "abcdefghijklmnopqrstuvwxyz ";
     HashEncrypt hashEncrypt = new HashEncrypt();
     int toAppend = 1;
-    String emptyString = "";
     String finalHash = "";
     long timerStart;
     long timerEnd;
@@ -19,7 +18,7 @@ public class Bruteforce {
         timerStart = System.nanoTime();
         while (true) {
             for (int i = 0; i < charactersA.length(); i++) {
-                decrypt(charactersA, i, toAppend, emptyString);
+                decrypt(charactersA, i, toAppend, "");
             }
             toAppend += 1;
         }
