@@ -33,7 +33,7 @@ public class Main {
         String unencryptedString;
 
         switch (encryptOrDecrypt) {
-            case "encrypt", "en", "e":
+            case "encrypt", "en", "e" -> {
                 System.out.println("\nType string to be encrypted:");
                 user.promptInput();
                 unencryptedString = user.getInput();
@@ -50,16 +50,17 @@ public class Main {
                     System.out.println("\nIllegal characters in string!\nConverting \"" + unencryptedString + "\"...");
                 }
                 System.out.println("\n" + unencryptedString + " -> " + hashEncrypt.encryptString(unencryptedString));
-                break;
-            case "decrypt", "de", "d":
+            }
+            case "decrypt", "de", "d" -> {
                 System.out.println("\nPaste hash to be decrypted:");
                 user.promptInput();
                 undecryptedString = user.getInput();
                 bruteforce.initializeDecrypt();
-                break;
-            default:
+            }
+            default -> {
                 System.out.println("\nInvalid input!\nterminating program...");
                 System.exit(0);
+            }
         }
 
     }
