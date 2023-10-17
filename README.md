@@ -1,6 +1,6 @@
 # hashcode
 ## Short explanation
-A rather simple console application coded in Java 15. The program is able to take a message and hash it using the SHA-1 algorithm. The Program is also capable of brute forcing a generated hash in order to retrieve the original message. For the sake of speed, there are strong limitations, though.
+A rather simple console application coded in Java 15. The program is able to take a message and hash it using the SHA-1 algorithm. The program is also capable of brute forcing a generated hash in order to retrieve the original message. For the sake of speed, there are strong limitations, though.
 
 ## Guide
 ### Startup
@@ -19,7 +19,7 @@ While encoding using hashcode, you will not have to particularly watch out for c
 
 When decoding, however, one will have to notice that hashcode will do fine reverting hashes to their respective original input if they were generated using hashcode, but not if they were generated with another program and from a message containing characters other than lowercase letters and spaces. In this case, the program would end up running indefinitely, because hashcode only checks messages it could itself generate.
 ### Speed
-While hashing a single message does not take much time, hashing tens - if not hundreds of thousands of messages - will. As hashcode can take a hash as input and try to brute force the original message, this is exactly what's happening there. This means that, depending on your hardware and the length of the original input, decoding may take from just a few seconds for three-letter messages to hours, days, months, or more.
+While hashing a single message does not take much time, hashing tens - if not hundreds of thousands of messages - will. As hashcode can take a hash as input and try to brute force the original message, this is exactly what is happening here. This means that, depending on your hardware and the length of the original input, decoding may take from just a few seconds for three-letter messages to hours, days, months, or more.
 
 On newer hardware, I found messages of up to six characters to be viable through testing, however, on older hardware, original messages of five characters or more might already take too long for you.
 On Windows, I found that the program runs significantly slower in the terminal/Powershell than when being executed in IntelliJ Idea Community Edition. Consider this when trying to maximize speed while decoding.
