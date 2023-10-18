@@ -13,7 +13,7 @@
         51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-        package hashcode;
+package hashcode;
 
 import java.security.NoSuchAlgorithmException;
 
