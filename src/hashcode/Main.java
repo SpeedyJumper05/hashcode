@@ -18,25 +18,24 @@
 import java.security.NoSuchAlgorithmException;
 
 public class Main {
-    public static String undecryptedString;
+    public static String undecryptedString = null;
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        User user = new User();
         HashEncrypt hashEncrypt = new HashEncrypt();
         Bruteforce bruteforce = new Bruteforce();
 
         String encryptOrDecrypt;
         System.out.println("Encrypt or decrypt? (e/d)");
-        user.promptInput();
-        encryptOrDecrypt = user.getInput().toLowerCase();
+        User.promptInput();
+        encryptOrDecrypt = User.getInput().toLowerCase();
 
         String unencryptedString;
 
         switch (encryptOrDecrypt) {
             case "encrypt", "en", "e" -> {
                 System.out.println("\nType string to be encrypted:");
-                user.promptInput();
-                unencryptedString = user.getInput();
+                User.promptInput();
+                unencryptedString = User.getInput();
                 unencryptedString = unencryptedString.toLowerCase();
                 boolean printReplaceMessage = false;
                 for (int i = 0; i < unencryptedString.length(); i++) {
@@ -53,8 +52,8 @@ public class Main {
             }
             case "decrypt", "de", "d" -> {
                 System.out.println("\nPaste hash to be decrypted:");
-                user.promptInput();
-                undecryptedString = user.getInput();
+                User.promptInput();
+                undecryptedString = User.getInput();
                 bruteforce.initializeDecrypt();
             }
             default -> {
