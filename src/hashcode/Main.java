@@ -41,7 +41,7 @@ public class Main {
                 for (int i = 0; i < unencryptedString.length(); i++) {
                     if (!bruteforce.charactersA.contains(Character.toString(unencryptedString.charAt(i)))) {
                         unencryptedString = unencryptedString.replace(Character.toString(unencryptedString.charAt(i)), "");
-                        i -= 1;
+                        i--;
                         printReplaceMessage = true;
                     }
                 }
